@@ -7,12 +7,6 @@
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" media="screen" type="text/css">
     
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-<!-- Begin Jekyll SEO tag v2.2.3 -->
 <title>Javadoc</title>
 
   </head>
@@ -66,171 +60,57 @@
 <h1 id="header-1"><a href="#header-1"></a>Creazione della documentazione</h1>
 
 <p>Prima di tutto va installata la JDK reperibile al seguente indirizzo <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">link</a>. Javadoc sara' automaticamente installato. 
-Per poter creare la documentazione, va utilizzata la combinazione <em>Alt + Shift + J</em> una volta selezionata l'intestazione del metodo. Vengono generati automaticamente i Tag per i parametri contenuti nel metodo (<strong>@param</strong>) e i Tag per eventuali eccezioni (<strong>@Throws</strong>). 
+Per poter creare la documentazione, va utilizzata la combinazione <em>Alt + Shift + J</em> una volta selezionata l'intestazione del metodo. Vengono generati automaticamente i Tag per i parametri contenuti nel metodo (<strong>@param</strong>) e i Tag per eventuali eccezioni (<strong>@Throws</strong>). </p>
 <img src="images/jdoc1.jpg" class="imgCenter">
-</p>
-<p>E' possibile inserire documentazione aggiuntiva tramite i caratteri /**<em>Testo inserito nel javadoc</em> */. Solitamente viene utilizzata per documentare variabili e per una descrizione generale delle classi. Di seguito esempi sulla documentazione di Classe e sulla documentazione delle variabili principali:
-<img src="images/jdoc2.jpg" class="imgCenter"></p>
+
+<p>E' possibile inserire documentazione aggiuntiva tramite i caratteri /**<em>Testo inserito nel javadoc</em> */. Solitamente viene utilizzata per documentare variabili e per una descrizione generale delle classi. Di seguito esempi sulla documentazione di Classe e sulla documentazione delle variabili principali:</p>
+<img src="images/jdoc2.jpg" class="imgCenter">
 <p>E' utile aggiungere anche una breve descrizione del metodo utilizzando sempre i caratteri speciali 
 <em>/***/</em>. Oltre a quelli gia' citati, e' possibile utilizzare una serie di Tag aggiuntivi che sono gestiti correttamente nel Javadoc:</p>
-<img src="images/jdoc3.jpg" class="imgCenter"></p>
+<img src="images/jdoc3.jpg" class="imgCenter">
 <p>Tramite i tag <strong>@Author</strong> e <strong>@Version</strong> e' possibile inoltre tenere traccia dell'autore dell'ultima modifica e della versione della classe considerata. Questi due Tag vengono posizionati di solito a livello di classe e non a livello di metodo. </p>
 
 
 <h1 id="header-1"><a href="#header-1"></a>Export della documentazione</h1>
-
-<h1 id="header-1"><a href="#header-1"></a>header 1</h1>
-
-<p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
-
-
-
-
+<p>Per generare la documentazione da Eclipse, basta andare in <em>Project -> Generate Javadoc</em>.</p>
+<img src="images/jdoc4.jpg" class="imgCenter">
+<p>Vanno successivamente selezionati i Package (Classi) da considerare nel Javadoc e va indicata la cartella di destinazione </p>
+<img src="images/jdoc5.jpg" class="imgCenter">
+<p>Va infine inserito un titolo</p>
+<img src="images/jdoc6.jpg" class="imgCenter">
 
 
+<h1 id="header-1"><a href="#header-1"></a>Documentazione in PDF</h1>
+<p>Anche se non largamente utilizzata, e' possibile produrre documentazione in PDF. Una possibile soluzione e' l'utilizzo di <em>AurigaDoclet</em>, una doclet Javadoc che permette di generare documentazione in vari formati (tra cui il pdf). Questa Doclet permette anche l'inserimento di istruzioni da riga di comando (nell'ultima schermata di generazione della documentazione) per apportare modifiche allo stile del documento generato. I markup utilizzati rimangono gli stessi per la documentazione in HTML (<em>@param, @throws,etc..</em>), l'unica differenza si trova in fase di generazione:</p>
+<img src="images/jdoc7.jpg" class="imgCenter">
+<p>Va selezionata l'opzione "Use custom doclet" e in doclet name va riportata la stringa: <em>"com.aurigalogic.doclet.core.Doclet"</em>. Nel class path va invece indicato il percorso del Jar di AurigaDoclet precedentemente scaricato.</p>
+<img src="images/jdoc8.jpg" class="imgCenter">
+<p>Nell'ultima schermata deve invece essere indicato il formato pdf (<em>-format pdf</em>) e la cartella destinazione della documentazione (<em>-out cartella</em>). A questo punto verra' generata la nostra documentazione in formato pdf.</p>
 
 
 
-<h2 id="header-2"><a href="#header-2"></a>Header 2</h2>
 
-<blockquote>
-  <p>This is a blockquote following a header.</p>
+<h1 id="header-1"><a href="#header-1"></a>Alternative al Javadoc</h1>
 
-  <p>When something is important enough, you do it even if the odds are not in your favor.</p>
-</blockquote>
-
-<h3 id="header-3"><a href="#header-3"></a>Header 3</h3>
-
-<h4 id="header-4"><a href="#header-4"></a>Header 4</h4>
-
+<p>Alternative rilevanti al Javadoc non ce ne sono. Per poter personalizzare la documentazione, basta modificare la doclet standard utilizzata da Eclipse. In particolare, agendo sulla doclet, e' possibile modificare:<ul>
+<li>Tag (Markup) utilizzati</li>
+<li>Colore e Stile della Documentazione</li>
+<li>Formato dell'output prodotto</li></ul>
+Ecco alcuni link che spiegano in dettaglio come create Doclet personalizzate.
 <ul>
-  <li>This is an unordered list following a header.</li>
-  <li>This is an unordered list following a header.</li>
-  <li>This is an unordered list following a header.</li>
-</ul>
+<li><a href="http://www.zdnet.com/article/customize-javadoc-output-with-doclets/">Link 1</li>
+<li><a href="https://github.com/Abnaxos/markdown-doclet">Link 2</li>
+<li><a href="https://www.javaworld.com/article/2075045/java-web-development/doclet-your-servlet-.html">Link 3</li></ul>
+</p>
 
-<h5 id="header-5"><a href="#header-5"></a>Header 5</h5>
 
-<ol>
-  <li>This is an ordered list following a header.</li>
-  <li>This is an ordered list following a header.</li>
-  <li>This is an ordered list following a header.</li>
-</ol>
 
-<h6 id="header-6"><a href="#header-6"></a>Header 6</h6>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">head1</th>
-      <th style="text-align: left">head two</th>
-      <th style="text-align: left">three</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good swedish fish</td>
-      <td style="text-align: left">nice</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">out of stock</td>
-      <td style="text-align: left">good and plenty</td>
-      <td style="text-align: left">nice</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good <code class="highlighter-rouge">oreos</code></td>
-      <td style="text-align: left">hmm</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good <code class="highlighter-rouge">zoute</code> drop</td>
-      <td style="text-align: left">yumm</td>
-    </tr>
-  </tbody>
-</table>
+ <hr class="lineDivider"></hr> 
 
-<h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
 
-<hr />
 
-<h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
 
-<ul>
-  <li>Item foo</li>
-  <li>Item bar</li>
-  <li>Item baz</li>
-  <li>Item zip</li>
-</ul>
-
-<h3 id="and-an-ordered-list">And an ordered list:</h3>
-
-<ol>
-  <li>Item one</li>
-  <li>Item two</li>
-  <li>Item three</li>
-  <li>Item four</li>
-</ol>
-
-<h3 id="and-a-nested-list">And a nested list:</h3>
-
-<ul>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item
-        <ul>
-          <li>level 3 item</li>
-          <li>level 3 item</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item</li>
-</ul>
-
-<h3 id="small-image">Small image</h3>
-
-<p><img src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" alt="" /></p>
-
-<h3 id="large-image">Large image</h3>
-
-<p><img src="https://guides.github.com/activities/hello-world/branching.png" alt="" /></p>
-
-<h3 id="definition-lists-can-be-used-with-html-syntax">Definition lists can be used with HTML syntax.</h3>
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-</code></pre>
-</div>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>The final element.
-</code></pre>
-</div>
 
         </section>
 
