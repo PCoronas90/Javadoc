@@ -62,13 +62,26 @@
 
 <p>Il formato HTML risulta essere quindi di gran lunga l'opzione migliore per la generazione della Documentazione standard.</p>
 
-<h1 id="header-1"><a href="#header-1"></a>Header 1</h1>
+
+<h1 id="header-1"><a href="#header-1"></a>Creazione della documentazione</h1>
+
+<p>Prima di tutto va installata la JDK reperibile al seguente indirizzo <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">link</a>. Javadoc sara' automaticamente installato. 
+Per poter creare la documentazione, va utilizzata la combinazione <em>Alt + Shift + J</em> una volta selezionata l'intestazione del metodo. Vengono generati automaticamente i Tag per i parametri contenuti nel metodo (<strong>@param</strong>) e i Tag per eventuali eccezioni (<strong>@Throws</strong>). 
+<img src="images/jdoc1.jpg" class="imgCenter">
+</p>
+<p>E' possibile inserire documentazione aggiuntiva tramite i caratteri /**<em>Testo inserito nel javadoc</em> */. Solitamente viene utilizzata per documentare variabili e per una descrizione generale delle classi. Di seguito esempi sulla documentazione di Classe e sulla documentazione delle variabili principali:
+<img src="images/jdoc2.jpg" class="imgCenter"></p>
+<p>E' utile aggiungere anche una breve descrizione del metodo utilizzando sempre i caratteri speciali 
+<em>/***/</em>. Oltre a quelli gia' citati, e' possibile utilizzare una serie di Tag aggiuntivi che sono gestiti correttamente nel Javadoc:</p>
+<img src="images/jdoc3.jpg" class="imgCenter"></p>
+<p>Tramite i tag <strong>@Author</strong> e <strong>@Version</strong> e' possibile inoltre tenere traccia dell'autore dell'ultima modifica e della versione della classe considerata. Questi due Tag vengono posizionati di solito a livello di classe e non a livello di metodo. </p>
+
+
+<h1 id="header-1"><a href="#header-1"></a>Export della documentazione</h1>
+
+<h1 id="header-1"><a href="#header-1"></a>header 1</h1>
 
 <p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
-
-
-
-
 
 
 
@@ -87,21 +100,6 @@
 </blockquote>
 
 <h3 id="header-3"><a href="#header-3"></a>Header 3</h3>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
-<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./lang/'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
-  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
-</div>
-
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
-<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
-  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="k">end</span>
-</code></pre>
-</div>
 
 <h4 id="header-4"><a href="#header-4"></a>Header 4</h4>
 
@@ -238,9 +236,9 @@
 
         <aside id="sidebar">
           
-            <a href="" class="button">
-              <small>Download</small>
-              .zip file
+            <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="button">
+              <small>Download</small> JDK
+     
             </a>
             <a href="" class="button">
               <small>Download</small>
