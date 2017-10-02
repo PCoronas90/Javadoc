@@ -34,17 +34,49 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
+          <!--<p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>-->
 
-<p><a href="another-page">Link to another page</a>.</p>
+<h1 id="header-1"><a href="#header-1"></a>Tipologie di Documentazione</h1>
 
-<p>There should be whitespace between paragraphs.</p>
+<p>Javadoc e' un applicativo incluso nella JDK, utilizzato per generare documentazione automatica del codice Java (Lato Server). Tale dolcumentazione viene prodotta in HTML secondo lo standard, ma attualmente siamo in grado di produrla in qualsiasi formato richiesto. Vanno pero' valutate le varie alternative: 
+</p>
+  <h3>Documentazione in formato Word/pdf:</h3>
+  <ul>
+  <li>Problema nel versionamento della documentazione: non possiamo accertarci che venga sempre consultata l'ultima versione disponibile;</li>
+  <li>Problema della diffusione della documentazione: non possiamo controllare a chi venga divulgato il file;</li>
+  <li>Ogni cambiamento di versione richiede di avvisare tutti gli interessati di un nuovo rilascio;</li>
+  <li>Vanno utilizzate librerie esterne per generarla (Doclet Custom)</li>
+  <li>E' di difficile consultazione rispetto alla versione HTML;</li>
+  <li>E' possibile riportarlo su carta stampata e quindi presentarlo come documento ufficiale o documento a corredo del prodotto.</li>
 
-<p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
+</ul>
+
+
+    <h3>Documentazione in formato HTML:</h3>
+  <ul>
+  <li>Non c'e' bisogno di utilizzare librerie esterne;</li>
+  <li>Viene resa disponibile ad un link (quindi viene gestita come un sito web). In questo modo o	viene consultata solamente l'ultima versione disponibile o puo' essere implementato facilmente un meccanismo di autenticazione per controllare gli accessi
+</li>
+  <li>E' di facile consultazione, in quanto rappresenta lo standard della documentazione Java.</li>
+</ul>
+
+<p>Il formato HTML risulta essere quindi di gran lunga l'opzione migliore per la generazione della Documentazione standard.</p>
 
 <h1 id="header-1"><a href="#header-1"></a>Header 1</h1>
 
 <p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <h2 id="header-2"><a href="#header-2"></a>Header 2</h2>
 
